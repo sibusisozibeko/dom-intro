@@ -26,6 +26,11 @@ var callTotalSettings = document.querySelector('.callTotalSettings');
 var smsTotalSettings = document.querySelector(".smsTotalSettings");
 var totalSettings = document.querySelector(".totalSettings");
 
+callTotalSettings.innerHTML = "0.00";
+smsTotalSettings.innerHTML = "0.00";
+totalSettings.innerHTML = "0.00";
+
+
 //add an event listener for when the 'Update settings' button is pressed
 updateSettings.addEventListener('click', update);
 //add an event listener for when the add button is pressed
