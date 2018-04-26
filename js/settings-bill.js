@@ -90,7 +90,23 @@ function BillSettings(){
     }
     else if (totalamount >= warningLevel){
         totalSettings.classList.add("warning");
-        console.log(tota)
+
+    }
+    if (totalamount < criticalevel){
+        // adding the danger class will make the text red
+      totalSettings.classList.remove("danger");
+    }
+    else if (totalamount < warningLevel){
+        totalSettings.classList.remove("warning");
+
+    }
+    if ( updateSettings < criticalevel){
+        // adding the danger class will make the text red
+    totalSettings.classList.remove("danger");
+    }
+    else if (totalamount < warningLevel){
+        totalSettings.classList.remove("warning");
+
     }
 }
 
