@@ -10,6 +10,10 @@ var addToBillBtn = document.querySelector('.addToBillBtn');
 //create a variable that will keep track of the total bill
 var callsTotal = 0;
 var smsTotal = 0;
+
+callTotalElem.innerHTML = "0.00";
+smsTotalElem.innerHTML = "0.00";
+totalCostElem.innerHTML = "0.00";
 function textBillTotal(){
     // get the value entered in the billType textfield
     var billTypeEntered = billTypeText.value.trim();

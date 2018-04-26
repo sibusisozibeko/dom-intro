@@ -17,6 +17,10 @@ var billItemTypeRadio = document.querySelector('.billItemTypeRadio')
 var call = 0;
 var sms = 0;
 
+callTotalElems.innerHTML = "0.00";
+smsTotalElems.innerHTML = "0.00";
+totalCostElems.innerHTML = "0.00";
+
 function checkedRadioBtn(){
   var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
   if (checkedRadioBtn){

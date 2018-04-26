@@ -6,6 +6,7 @@
 //get a reference to the billString
  var billStringField  = document.querySelector('.billString');
 //create the function that will be called when the calculate button is pressed
+
 function calculateBtnClicked(){
     // get the string entered in the textArea
     var billString = billStringField.value;
