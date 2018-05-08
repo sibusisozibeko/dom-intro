@@ -14,35 +14,38 @@ var billItemTypeRadio = document.querySelector('.billItemTypeRadio')
 // * add the appropriate value to the running total
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen
-var call = 0;
-var sms = 0;
+//Dom logic
+function CheckRadio(){
+  var call = 0;
+  var sms = 0;
 
-callTotalElems.innerHTML = "0.00";
-smsTotalElems.innerHTML = "0.00";
-totalCostElems.innerHTML = "0.00";
-
-function checkedRadioBtn(){
   var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
   if (checkedRadioBtn){
      var billItemType = checkedRadioBtn.value
      // billItemType will be 'call' or 'sms'
-  }
-
-    // get the value entered in the billType textfield
-
-    // update the correct total
+  }  // get the value entered in the billType textfield  // update the correct total
     if (billItemType === "call"){
         call += 2.75;
     }
     else if (billItemType === "sms"){
         sms += 0.75;
     }
+    return call;
+    return sms;
+  }
 
 
+
+function checkedRadioBtn() {
         callTotalElems.innerHTML = call.toFixed(2);
         smsTotalElems.innerHTML = sms.toFixed(2);
         var totalCosts = call + sms;
         totalCostElems.innerHTML = totalCosts.toFixed(2)
+
+        callTotalElems.innerHTML = "0.00";
+        smsTotalElems.innerHTML = "0.00";
+        totalCostElems.innerHTML = "0.00";
+
 
     //color the total based on the criteria
     if (totalCosts >= 50){
@@ -52,6 +55,12 @@ function checkedRadioBtn(){
     else if (totalCosts >= 30){
         totalCostElems.classList.add("warning");
     }
+    return {
+    calculate: totalCosts
+
+
+}
+
 }
 
 
